@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F4A736E2-5EC4-4E1E-A2F9-0F18F7B6F15A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{51B3EACA-1A56-4ECB-911F-B769F65BAB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecLibrary.BookAPI", "FatecLibrary.BookAPI\FatecLibrary.BookAPI.csproj", "{B55724D9-F2BF-4247-AA19-B736262868AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B55724D9-F2BF-4247-AA19-B736262868AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55724D9-F2BF-4247-AA19-B736262868AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55724D9-F2BF-4247-AA19-B736262868AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55724D9-F2BF-4247-AA19-B736262868AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B55724D9-F2BF-4247-AA19-B736262868AD} = {F4A736E2-5EC4-4E1E-A2F9-0F18F7B6F15A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F340B521-663E-4896-A8DE-04CC4B10BC35}
+	EndGlobalSection
+EndGlobal
