@@ -10,6 +10,6 @@ public class Book
     public string? ImageURL { get; set; }
 
 
-    public Publishing? Publing { get; set; }
+    public Publishing? Publishing { get; set; }
     public int PublishingId { get; set; }
 }
