@@ -22,8 +22,6 @@
 	
 	<ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Context\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
