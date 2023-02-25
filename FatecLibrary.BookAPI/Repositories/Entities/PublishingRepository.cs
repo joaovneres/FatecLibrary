@@ -1,6 +1,7 @@
 ﻿using FatecLibrary.BookAPI.Context;
 using FatecLibrary.BookAPI.Models.Entities;
 using FatecLibrary.BookAPI.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace FatecLibrary.BookAPI.Repositories.Entities;
 
@@ -14,36 +15,41 @@ public class PublishingRepository : IPublishingRepository
 
     public PublishingRepository(AppDBContext dBContext)
     {
-        _dbContext  = dBContext;
+        _dBContext  = dBContext;
     }
 
-    public Task<Publishing> Create(Publishing publishing)
+    public async Task<IEnumerable<Publishing>> GetAll()
     {
-        throw new NotImplementedException();
+        return await _dBContext.Publishers.ToListAsync();
+    }
+    public async Task<IEnumerable<Publishing>> GetPublishersBooks()
+    {
+        return await _dBContext.Publishers.Include(p => p.Books).ToListAsync();
+    }
+    public async Task<Publishing> GetById(int id)
+    {
+        return await _dBContext.Publishers.Where(p => p.Id == id).FirstOrDefaultAsync();
     }
 
-    public Task<Publishing> Delete(int id)
+    public async Task<Publishing> Create(Publishing publishing)
     {
-        throw new NotImplementedException();
+        _dBContext.Publishers.Add(publishing);
+        await _dBContext.SaveChangesAsync();
+        return publishing;
+    }
+    public async Task<Publishing> Update(Publishing publishing)
+    {
+        _dBContext.Entry(publishing).State = EntityState.Modified;
+        await _dBContext.SaveChangesAsync();
+        return publishing;
     }
 
-    public Task<IEnumerable<Publishing>> GetAll()
+    public async Task<Publishing> Delete(int id)
     {
-        throw new NotImplementedException();
+        var publishing = await GetById(id);
+        _dBContext.Publishers.Remove(publishing);
+        await _dBContext.SaveChangesAsync();
+        return publishing;
     }
 
-    public Task<Publishing> GetById(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<IEnumerable<Publishing>> GetPublishersBooks()
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Publishing> Update(Publishing publishing)
-    {
-        throw new NotImplementedException();
-    }
 }

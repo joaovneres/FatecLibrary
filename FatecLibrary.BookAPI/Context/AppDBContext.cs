@@ -35,7 +35,34 @@ public class AppDBContext : DbContext
             .Property(b => b.ImageURL).HasMaxLength(255);
     
         // relacionamento
-        modelBuilder.Entity<Publishing>().HasMany(p => p.Books).WithOne(b => b.Publishing);
+        modelBuilder.Entity<Publishing>().HasMany(p => p.Books).WithOne(b => b.Publishing).IsRequired().OnDelete(DeleteBehavior.Cascade);
+
+        //Populando o BD caso com as primeiras editoras
+        modelBuilder.Entity<Publishing>().HasData(
+            new Publishing
+            {
+                Id = 1,
+                Name = "Alta Books",
+                Acronym = "AB",
+            },
+            new Publishing
+            {
+                Id = 2,
+                Name = "Editora Fatec",
+                Acronym = "Fatec",
+            });
+
+        modelBuilder.Entity<Book>().HasData(
+            new Book
+            {
+                Id = 3,
+                Title = "Alta",
+                Price = 1,
+                PublicationYear = 1,
+                Edition = 1,
+                ImageURL = "asas",
+                PublishingId = 1,
+            });
     }
 
 }
