@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FatecLibrary.BookAPI.DTO.Entities;
+using FatecLibrary.BookAPI.Models.Entities;
 using FatecLibrary.BookAPI.Repositories.Interfaces;
 using FatecLibrary.BookAPI.Services.Interfaces;
 
@@ -35,21 +36,20 @@ public class PublishingService : IPublishingService
         var publishing = await _publishingRepository.GetById(id);
         return _mapper.Map<PublishingDTO>(publishing);
     }
-
-    public Task Create(PublishingDTO publishingDTO)
+    public async Task Create(PublishingDTO publishingDTO)
     {
-        throw new NotImplementedException();
+        var publishing = _mapper.Map<Publishing>(publishingDTO);
+        await _publishingRepository.Create(publishing);
+        publishingDTO.Id = publishing.Id;
     }
-
-
-
-    public Task Remove(int id)
+    public async Task Update(PublishingDTO publishingDTO)
     {
-        throw new NotImplementedException();
+        var publishing = _mapper.Map<Publishing>(publishingDTO);
+        await _publishingRepository.Update(publishing);
     }
-
-    public Task Update(PublishingDTO publishingDTO)
+    public async Task Remove(int id)
     {
-        throw new NotImplementedException();
+        var publishing = await _publishingRepository.GetById(id);
+        await _publishingRepository.Delete(publishing.Id);
     }
 }

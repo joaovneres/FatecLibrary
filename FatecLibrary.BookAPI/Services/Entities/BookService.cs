@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FatecLibrary.BookAPI.DTO.Entities;
+using FatecLibrary.BookAPI.Models.Entities;
 using FatecLibrary.BookAPI.Repositories.Interfaces;
 using FatecLibrary.BookAPI.Services.Interfaces;
 
@@ -25,19 +26,21 @@ public class BookService : IBookService
         var book = await _bookRepository.GetById(id);
         return _mapper.Map<BookDTO>(book);
     }
-
-    public Task<BookDTO> Create(BookDTO bookDTO)
+    public async Task Create(BookDTO bookDTO)
     {
-        throw new NotImplementedException();
+        var book = _mapper.Map<Book>(bookDTO);
+        await _bookRepository.Create(book);
+        bookDTO.Id = bookDTO.Id;
+    }
+    public async Task Update(BookDTO bookDTO)
+    {
+        var book = _mapper.Map<Book>(bookDTO);
+        await _bookRepository.Update(book);
     }
 
-    public Task<BookDTO> Delete(int id)
+    public async Task Remove(int id)
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<BookDTO> Update(BookDTO bookDTO)
-    {
-        throw new NotImplementedException();
+        var book = await _bookRepository.GetById(id);
+        await _bookRepository.Delete(book.Id);
     }
 }
