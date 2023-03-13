@@ -4,8 +4,6 @@ namespace FatecLibrary.BookAPI.Repositories.Interfaces;
 
 public interface IPublishingRepository
 {
-    Task GetPublishersBook { get; }
-
     Task<IEnumerable<Publishing>> GetAll();
     Task<IEnumerable<Publishing>> GetPublishersBooks();
     Task<Publishing> GetById(int id);

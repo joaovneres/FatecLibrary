@@ -24,7 +24,7 @@ public class BookController : Controller
         return Ok(booksDTO);
     }
 
-    [HttpGet("{id: int}", Name = "GetBook")]
+    [HttpGet("{id:int}", Name = "GetBook")]
     public async Task<ActionResult<BookDTO>> Get(int id)
     {
         var bookDTO = await _bookService.GetById(id);

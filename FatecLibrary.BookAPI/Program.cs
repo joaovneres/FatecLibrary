@@ -1,4 +1,8 @@
 using FatecLibrary.BookAPI.Context;
+using FatecLibrary.BookAPI.Repositories.Entities;
+using FatecLibrary.BookAPI.Repositories.Interfaces;
+using FatecLibrary.BookAPI.Services.Entities;
+using FatecLibrary.BookAPI.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +25,12 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 
 //Garantir que todos os assemblies do domain sejam injetados
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+//Criando a injeção de dependência
+builder.Services.AddScoped<IPublishingRepository, PublishingRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IPublishingService, PublishingService>();
+builder.Services.AddScoped<IBookService, BookService>();
 
 var app = builder.Build();
 

@@ -31,7 +31,7 @@ public class PublishingController : Controller
         return Ok(publishingDTO);
     }
 
-    [HttpGet("{id: int}", Name = "GetPublishing")]
+    [HttpGet("{id:int}", Name = "GetPublishing")]
     public async Task<ActionResult<PublishingDTO>> Get(int id)
     {
         var publishingDTO = await _publishingService.GetById(id);
