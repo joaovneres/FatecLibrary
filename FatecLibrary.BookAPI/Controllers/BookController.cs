@@ -19,9 +19,9 @@ public class BookController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<BookDTO>>> Get()
     {
-        var bookDTO = await _bookService.GetAll();
-        if (bookDTO is null) return NotFound("Books not found!");
-        return Ok(bookDTO);
+        var booksDTO = await _bookService.GetAll();
+        if (booksDTO is null) return NotFound("Books not found!");
+        return Ok(booksDTO);
     }
 
     [HttpGet("{id: int}", Name = "GetBook")]

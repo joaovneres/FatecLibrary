@@ -18,9 +18,9 @@ public class PublishingController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<PublishingDTO>>> Get()
     {
-        var publishingDTO = await _publishingService.GetAll();
-        if(publishingDTO is null) return NotFound("Publishers not found!");
-        return Ok(publishingDTO);
+        var publishersDTO = await _publishingService.GetAll();
+        if(publishersDTO is null) return NotFound("Publishers not found!");
+        return Ok(publishersDTO);
     }
 
     [HttpGet("books")]
