@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F4A736E2-5EC4-4E1E-A2F9-0F18F7B6F15A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{7F11FDD7-B03C-47EF-9E06-637BFA2CF9DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{51B3EACA-1A56-4ECB-911F-B769F65BAB57}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{85E2EB76-D76F-4F67-9A5D-9FF97EADD733}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecLibrary.BookAPI", "FatecLibrary.BookAPI\FatecLibrary.BookAPI.csproj", "{B55724D9-F2BF-4247-AA19-B736262868AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecLibrary.BookAPI", "FatecLibrary.BookAPI\FatecLibrary.BookAPI.csproj", "{AAB7550F-8A06-4FB2-8A19-1879B7A8071A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecLibrary.Web", "Teste\FatecLibrary.Web.csproj", "{863FC220-728B-4861-9017-C8E0A228985A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecLibrary.Web", "FatecLibrary.Web\FatecLibrary.Web.csproj", "{F46DB62B-080B-4263-89D4-EF824D9B446F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,23 +17,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B55724D9-F2BF-4247-AA19-B736262868AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B55724D9-F2BF-4247-AA19-B736262868AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B55724D9-F2BF-4247-AA19-B736262868AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B55724D9-F2BF-4247-AA19-B736262868AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{863FC220-728B-4861-9017-C8E0A228985A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{863FC220-728B-4861-9017-C8E0A228985A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{863FC220-728B-4861-9017-C8E0A228985A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{863FC220-728B-4861-9017-C8E0A228985A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB7550F-8A06-4FB2-8A19-1879B7A8071A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB7550F-8A06-4FB2-8A19-1879B7A8071A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB7550F-8A06-4FB2-8A19-1879B7A8071A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB7550F-8A06-4FB2-8A19-1879B7A8071A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B55724D9-F2BF-4247-AA19-B736262868AD} = {F4A736E2-5EC4-4E1E-A2F9-0F18F7B6F15A}
-		{863FC220-728B-4861-9017-C8E0A228985A} = {51B3EACA-1A56-4ECB-911F-B769F65BAB57}
+		{AAB7550F-8A06-4FB2-8A19-1879B7A8071A} = {85E2EB76-D76F-4F67-9A5D-9FF97EADD733}
+		{F46DB62B-080B-4263-89D4-EF824D9B446F} = {7F11FDD7-B03C-47EF-9E06-637BFA2CF9DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F340B521-663E-4896-A8DE-04CC4B10BC35}
+		SolutionGuid = {F236B5B4-121B-4A8F-89F0-E98BBD31A16F}
 	EndGlobalSection
 EndGlobal

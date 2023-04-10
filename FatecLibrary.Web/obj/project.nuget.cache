@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dng5Zy8Kg98OxVzdL+PXUzYkGTLjo8Z93GXpVn0JkBa7FqM9m3AdfhgjZ591SySRCiXJecSTB33FiG/cEDNcqg==",
+  "dgSpecHash": "2J8oYQ/U9MUFj9IMgGVmfCWAMI6KqI2MdsQOe5FmAwRteedadNqtjdAkorzFe64wfXHLY/5EcUNgveqJwuOABQ==",
   "success": true,
-  "projectFilePath": "C:\\src\\FatecLibrary\\Teste\\FatecLibrary.Web.csproj",
+  "projectFilePath": "C:\\src\\FatecLibrary\\FatecLibrary.Web\\FatecLibrary.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

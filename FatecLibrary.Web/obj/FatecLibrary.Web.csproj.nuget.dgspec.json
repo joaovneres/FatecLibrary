@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\FatecLibrary\\Teste\\FatecLibrary.Web.csproj": {}
+    "C:\\src\\FatecLibrary\\FatecLibrary.Web\\FatecLibrary.Web.csproj": {}
   },
   "projects": {
     "C:\\src\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj": {
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\src\\FatecLibrary\\Teste\\FatecLibrary.Web.csproj": {
+    "C:\\src\\FatecLibrary\\FatecLibrary.Web\\FatecLibrary.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\FatecLibrary\\Teste\\FatecLibrary.Web.csproj",
+        "projectUniqueName": "C:\\src\\FatecLibrary\\FatecLibrary.Web\\FatecLibrary.Web.csproj",
         "projectName": "FatecLibrary.Web",
-        "projectPath": "C:\\src\\FatecLibrary\\Teste\\FatecLibrary.Web.csproj",
+        "projectPath": "C:\\src\\FatecLibrary\\FatecLibrary.Web\\FatecLibrary.Web.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\FatecLibrary\\Teste\\obj\\",
+        "outputPath": "C:\\src\\FatecLibrary\\FatecLibrary.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
