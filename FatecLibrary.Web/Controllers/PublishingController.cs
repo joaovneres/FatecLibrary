@@ -63,4 +63,23 @@ public class PublishingController : Controller
         }
         return View(publishingViewModel);
     }
+
+
+    // Criar a view DeletePublishing
+    [HttpGet]
+    public async Task<ActionResult<PublishingViewModel>> DeletePublisihng(int id)
+    {
+        var result = await _publishingService.FindPublishingById(id);
+        if (result is null) return View("Error");
+        return View(result);
+    }
+
+    [HttpPost(), ActionName("DeletePublishing")]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        var result = await _publishingService.DeletePublishing(id);
+        if(!result) return View("Error");
+        return RedirectToAction("Index");
+        // return RedirectToAction(nameof(Index));
+    }
 }
