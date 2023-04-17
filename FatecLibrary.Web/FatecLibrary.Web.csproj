@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Services\Entities\" />
+    <Folder Include="Views\Book\" />
   </ItemGroup>
 
 </Project>

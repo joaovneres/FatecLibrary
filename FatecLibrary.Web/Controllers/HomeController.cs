@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using FatecLibrary.Web.Models;
+using FatecLibrary.Web.Models.Error;
 
 namespace FatecLibrary.Web.Controllers
 {

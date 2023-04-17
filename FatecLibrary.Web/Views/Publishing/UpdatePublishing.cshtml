@@ -1,0 +1,38 @@
+﻿@model FatecLibrary.Web.Models.Entities.PublishingViewModel
+
+
+
+<h3>Update Publhishing</h3>
+
+
+
+<hr />
+<form asp-action="UpdatePublishing">
+
+
+
+
+    <div class="container">
+        <div class="col-6">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="Acronym" class="control-label"></label>
+                <input asp-for="Acronym" class="form-control" />
+                <span asp-validation-for="Acronym" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group" style="padding-top: 10px">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-info">Back to List</a>
+        </div>
+    </div>
+</form>

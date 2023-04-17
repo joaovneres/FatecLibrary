@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FatecLibrary.Web.Models.Entities.PublishingViewModel>
+
+
+
+<h2>Publishers</h2>
+<hr />
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div class="pull-left">
+                    <a asp-action="CreatePublishing" class="btn btn-primary">
+                        <span title="Create New" class="fas fa-plus"></span> New Publishing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container text-center">
+
+    <br />
+    <div class="panel panel-default">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Acronym)
+                    </th>
+                    <th>
+                        Options
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Acronym)
+                        </td>
+                        <td align="center">
+                            <a asp-action="UpdatePublishing" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
+                                <span class="fas fa-edit"></span>
+                            </a>
+                            <a asp-action="DeletePublishing" asp-route-id="@item.Id" title="Delete" class="btn btn-danger">
+                                <span class="fas fa-trash-alt"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
