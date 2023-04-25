@@ -28,14 +28,14 @@ public class PublishingController : Controller
         return View();
     }
 
-    [HttpPost]
+    [HttpPut]
     public async Task<IActionResult> CreatePublishing(PublishingViewModel publishingViewModel)
     {
         if (ModelState.IsValid)
         {
             var result = await _publishingService.CreatePublishing(publishingViewModel);
 
-            if (result is null) return RedirectToAction(nameof(Index));
+            if (result is not null) return RedirectToAction(nameof(Index));
             else
                 return BadRequest("Error");
         }
@@ -51,7 +51,7 @@ public class PublishingController : Controller
         return View(result);
     }
 
-    [HttpPut]
+    [HttpPost]
     public async Task<IActionResult> UpdatePublishing(PublishingViewModel publishingViewModel)
     {
         if (ModelState.IsValid)
