@@ -60,7 +60,7 @@ public class PublishingService : IPublishingService
         var client = _clientFactory.CreateClient("BookAPI");
         StringContent content = new StringContent(JsonSerializer.Serialize(publishingVM),
             Encoding.UTF8,
-            "aplication/json");
+            "application/json");
 
         using (var response = await client.PostAsync(apiEndPoint, content))
         {
@@ -82,7 +82,7 @@ public class PublishingService : IPublishingService
         var client = _clientFactory.CreateClient("BookAPI");
         PublishingViewModel publishingUpdate = new PublishingViewModel();
 
-        using (var response = await client.PutAsJsonAsync(apiEndPoint, publishingUpdate))
+        using (var response = await client.PutAsJsonAsync(apiEndPoint, publishingVM))
         {
             if (response.IsSuccessStatusCode)
             {

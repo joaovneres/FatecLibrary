@@ -39,7 +39,7 @@ public class BookController : Controller
         {
             var result = await _bookService.CreateBook(bookViewModel);
 
-            if (result is null) return RedirectToAction(nameof(Index));
+            if (result is not null) return RedirectToAction(nameof(Index));
         }
         else
             ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(), "Id", "Name");
@@ -58,7 +58,7 @@ public class BookController : Controller
         return View(result);
     }
 
-    [HttpPut]
+    [HttpPost]
     public async Task<IActionResult> UpdateBook(BookViewModel bookViewModel, int id)
     {
         if (ModelState.IsValid)
@@ -84,7 +84,7 @@ public class BookController : Controller
         return View(result);
     }
 
-    [HttpPost(), ActionName("DeleteBook")]
+    [HttpPost, ActionName("DeleteBook")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var result = await _bookService.DeleteBookById(id);

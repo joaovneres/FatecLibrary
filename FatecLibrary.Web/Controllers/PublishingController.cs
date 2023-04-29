@@ -28,7 +28,7 @@ public class PublishingController : Controller
         return View();
     }
 
-    [HttpPut]
+    [HttpPost]
     public async Task<IActionResult> CreatePublishing(PublishingViewModel publishingViewModel)
     {
         if (ModelState.IsValid)
@@ -67,14 +67,14 @@ public class PublishingController : Controller
 
     // Criar a view DeletePublishing
     [HttpGet]
-    public async Task<ActionResult<PublishingViewModel>> DeletePublisihng(int id)
+    public async Task<ActionResult<PublishingViewModel>> DeletePublishing(int id)
     {
         var result = await _publishingService.FindPublishingById(id);
         if (result is null) return View("Error");
         return View(result);
     }
 
-    [HttpPost(), ActionName("DeletePublishing")]
+    [HttpPost, ActionName("DeletePublishing")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var result = await _publishingService.DeletePublishing(id);

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FatecLibrary.Web.Models.Entities.BookViewModel>
+
+<h2>Books</h2>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div class="pull-left">
+                    <a asp-action="CreateBook" class="btn btn-primary">
+                        <span title="Create New" class="fas fa-plus"></span> New Book
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+
+    <br />
+    <div class="panel panel-default">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PublicationYear)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Edition)
+                    </th>
+                    <th>
+                        Options
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PublicationYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Edition)
+                        </td>
+                        <td align="center">
+                            <a asp-action="UpdateBook" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
+                                <span class="fas fa-edit"></span>
+                            </a>
+                            <a asp-action="DeleteBook" asp-route-id="@item.Id" title="Delete" class="btn btn-danger">
+                                <span class="fas fa-trash-alt"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

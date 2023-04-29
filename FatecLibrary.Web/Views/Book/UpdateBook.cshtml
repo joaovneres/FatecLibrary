@@ -1,0 +1,69 @@
+﻿@model FatecLibrary.Web.Models.Entities.BookViewModel
+
+<h3>Update Book</h3>
+
+<hr />
+<form asp-action="UpdateBook">
+
+
+    <div class="container">
+        <div class="col-6">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="Price" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="PublicationYear" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="PublicationYear" class="form-control" />
+                    <span asp-validation-for="PublicationYear" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="Edition" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Edition" class="form-control" />
+                    <span asp-validation-for="Edition" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="ImageURL" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="ImageURL" class="form-control" />
+                    <span asp-validation-for="ImageURL" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="PublishingId" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="PublishingId" class="form-control" asp-items="@ViewBag.PublishingId"> </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" style="padding-top: 10px">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-info">Back to List</a>
+        </div>
+    </div>
+</form>

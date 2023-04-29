@@ -59,7 +59,7 @@ public class BookService : IBookService
         var client = _clientFactory.CreateClient("BookAPI");
         StringContent content = new StringContent(JsonSerializer.Serialize(bookVM),
             Encoding.UTF8,
-            "aplication/json");
+            "application/json");
 
         using (var response = await client.PostAsync(apiEndPoint, content))
         {

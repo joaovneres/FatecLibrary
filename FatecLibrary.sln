@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{85
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecLibrary.BookAPI", "FatecLibrary.BookAPI\FatecLibrary.BookAPI.csproj", "{AAB7550F-8A06-4FB2-8A19-1879B7A8071A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecLibrary.Web", "FatecLibrary.Web\FatecLibrary.Web.csproj", "{F46DB62B-080B-4263-89D4-EF824D9B446F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecLibrary.Web", "FatecLibrary.Web\FatecLibrary.Web.csproj", "{F46DB62B-080B-4263-89D4-EF824D9B446F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
