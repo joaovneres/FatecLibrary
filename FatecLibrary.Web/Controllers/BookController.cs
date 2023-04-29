@@ -79,8 +79,8 @@ public class BookController : Controller
     [HttpGet]
     public async Task<ActionResult<BookViewModel>> DeleteBook(int id)
     {
-        var result = await _bookService.DeleteBookById(id);
-        if (!result) return View("Error");
+        var result = await _bookService.FindBookById(id);
+        if (result is null) return View("Error");
         return View(result);
     }
 
