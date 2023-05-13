@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecLibrary.BookAPI", "Fat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecLibrary.Web", "FatecLibrary.Web\FatecLibrary.Web.csproj", "{F46DB62B-080B-4263-89D4-EF824D9B446F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecLibrary.IdentityServer", "FatecLibrary.IdentityServer\FatecLibrary.IdentityServer.csproj", "{EB297485-59F9-40F0-A030-178FD9A8F4AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F46DB62B-080B-4263-89D4-EF824D9B446F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB297485-59F9-40F0-A030-178FD9A8F4AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB297485-59F9-40F0-A030-178FD9A8F4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB297485-59F9-40F0-A030-178FD9A8F4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB297485-59F9-40F0-A030-178FD9A8F4AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AAB7550F-8A06-4FB2-8A19-1879B7A8071A} = {85E2EB76-D76F-4F67-9A5D-9FF97EADD733}
 		{F46DB62B-080B-4263-89D4-EF824D9B446F} = {7F11FDD7-B03C-47EF-9E06-637BFA2CF9DA}
+		{EB297485-59F9-40F0-A030-178FD9A8F4AE} = {85E2EB76-D76F-4F67-9A5D-9FF97EADD733}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F236B5B4-121B-4A8F-89F0-E98BBD31A16F}
