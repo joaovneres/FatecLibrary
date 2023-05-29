@@ -1,5 +1,6 @@
 ﻿using FatecLibrary.Web.Models.Entities;
 using FatecLibrary.Web.Services.Interfaces;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 
@@ -19,9 +20,10 @@ public class PublishingService : IPublishingService
         _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
     }
 
-    public async Task<IEnumerable<PublishingViewModel>> GetAllPublishers()
+    public async Task<IEnumerable<PublishingViewModel>> GetAllPublishers(string token)
     {
         var client = _clientFactory.CreateClient("BookAPI");
+        PutTokenInHeaderAuthorization(token, client);
         var response = await client.GetAsync(apiEndPoint);
 
         if (response.IsSuccessStatusCode)
@@ -37,9 +39,10 @@ public class PublishingService : IPublishingService
         return publishers;
     }
 
-    public async Task<PublishingViewModel> FindPublishingById(int id)
+    public async Task<PublishingViewModel> FindPublishingById(int id, string token)
     {
         var client = _clientFactory.CreateClient("BookAPI");
+        PutTokenInHeaderAuthorization(token, client);
         using (var response = await client.GetAsync(apiEndPoint + id))
         {
             if (response.IsSuccessStatusCode && response.Content is not null)
@@ -55,9 +58,10 @@ public class PublishingService : IPublishingService
         return _publishingViewModel;
     }
 
-    public async Task<PublishingViewModel> CreatePublishing(PublishingViewModel publishingVM)
+    public async Task<PublishingViewModel> CreatePublishing(PublishingViewModel publishingVM, string token)
     {
         var client = _clientFactory.CreateClient("BookAPI");
+        PutTokenInHeaderAuthorization(token, client);
         StringContent content = new StringContent(JsonSerializer.Serialize(publishingVM),
             Encoding.UTF8,
             "application/json");
@@ -77,9 +81,10 @@ public class PublishingService : IPublishingService
         return _publishingViewModel;
     }
 
-    public async Task<PublishingViewModel> UpdatePublishing(PublishingViewModel publishingVM)
+    public async Task<PublishingViewModel> UpdatePublishing(PublishingViewModel publishingVM, string token)
     {
         var client = _clientFactory.CreateClient("BookAPI");
+        PutTokenInHeaderAuthorization(token, client);
         PublishingViewModel publishingUpdate = new PublishingViewModel();
 
         using (var response = await client.PutAsJsonAsync(apiEndPoint, publishingVM))
@@ -96,13 +101,19 @@ public class PublishingService : IPublishingService
         }
         return publishingUpdate;
     }
-    public async Task<bool> DeletePublishing(int id)
+    public async Task<bool> DeletePublishing(int id, string token)
     {
         var client = _clientFactory.CreateClient("BookAPI");
+        PutTokenInHeaderAuthorization(token, client);
         using (var response = await client.DeleteAsync(apiEndPoint + id))
         {
             if (response.IsSuccessStatusCode) return true;
         }
         return false;
+    }
+
+    private static void PutTokenInHeaderAuthorization(string token, HttpClient client)
+    {
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Baerer", token);
     }
 }

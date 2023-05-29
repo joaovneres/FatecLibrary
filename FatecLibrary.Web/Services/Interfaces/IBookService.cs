@@ -4,9 +4,9 @@ namespace FatecLibrary.Web.Services.Interfaces;
 
 public interface IBookService
 {
-    Task<IEnumerable<BookViewModel>> GetAllBooks();
-    Task<BookViewModel> FindBookById(int id);
-    Task<BookViewModel> CreateBook(BookViewModel bookVM);
-    Task<BookViewModel> UpdateBook(BookViewModel bookVM);
-    Task<bool> DeleteBookById(int id);
+    Task<IEnumerable<BookViewModel>> GetAllBooks(string token);
+    Task<BookViewModel> FindBookById(int id, string token);
+    Task<BookViewModel> CreateBook(BookViewModel bookVM, string token);
+    Task<BookViewModel> UpdateBook(BookViewModel bookVM, string token);
+    Task<bool> DeleteBookById(int id, string token);
 }
