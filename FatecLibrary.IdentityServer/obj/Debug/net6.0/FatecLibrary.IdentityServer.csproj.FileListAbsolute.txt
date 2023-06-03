@@ -51,3 +51,4 @@ C:\src\FatecLibrary\FatecLibrary.IdentityServer\obj\Debug\net6.0\refint\FatecLib
 C:\src\FatecLibrary\FatecLibrary.IdentityServer\obj\Debug\net6.0\FatecLibrary.IdentityServer.pdb
 C:\src\FatecLibrary\FatecLibrary.IdentityServer\obj\Debug\net6.0\FatecLibrary.IdentityServer.genruntimeconfig.cache
 C:\src\FatecLibrary\FatecLibrary.IdentityServer\obj\Debug\net6.0\ref\FatecLibrary.IdentityServer.dll
+C:\src\FatecLibrary\FatecLibrary.IdentityServer\bin\Debug\net6.0\keys\is-signing-key-16208DEDAFC46AA7F44A1E8786990564.json

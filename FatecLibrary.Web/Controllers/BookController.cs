@@ -1,10 +1,14 @@
 ﻿using FatecLibrary.Web.Models.Entities;
+using FatecLibrary.Web.Roles;
 using FatecLibrary.Web.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FatecLibrary.Web.Controllers;
 
+[Authorize(Roles = Role.Admin)]
 public class BookController : Controller
 {
     private readonly IBookService _bookService;
@@ -19,7 +23,7 @@ public class BookController : Controller
     [HttpGet]
     public async Task<ActionResult<IEnumerable<BookViewModel>>> Index()
     {
-        var result = await _bookService.GetAllBooks();
+        var result = await _bookService.GetAllBooks(await GetAccessToken());
         if (result is null) return View("Error");
         return View(result);
     }
@@ -28,7 +32,7 @@ public class BookController : Controller
     [HttpGet]
     public async Task<IActionResult> CreateBook()
     {
-        ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(), "Id", "Name");
+        ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(await GetAccessToken()), "Id", "Name");
         return View();
     }
 
@@ -37,12 +41,12 @@ public class BookController : Controller
     {
         if (ModelState.IsValid)
         {
-            var result = await _bookService.CreateBook(bookViewModel);
+            var result = await _bookService.CreateBook(bookViewModel, await GetAccessToken());
 
             if (result is not null) return RedirectToAction(nameof(Index));
         }
         else
-            ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(), "Id", "Name");
+            ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(await GetAccessToken()), "Id", "Name");
         // return BadRequest("Erro");
 
         return View(bookViewModel);
@@ -52,8 +56,8 @@ public class BookController : Controller
     [HttpGet]
     public async Task<IActionResult> UpdateBook(int id)
     {
-        ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(), "Id", "Name");
-        var result = await _bookService.FindBookById(id);
+        ViewBag.PublishingId = new SelectList(await _publishingService.GetAllPublishers(await GetAccessToken()), "Id", "Name");
+        var result = await _bookService.FindBookById(id, await GetAccessToken());
         if (result is null) return View("Error");
         return View(result);
     }
@@ -63,9 +67,9 @@ public class BookController : Controller
     {
         if (ModelState.IsValid)
         {
-            if (await _publishingService.FindPublishingById(bookViewModel.PublishingId) is not null)
+            if (await _publishingService.FindPublishingById(bookViewModel.PublishingId, await GetAccessToken()) is not null)
             {
-                var result = await _bookService.UpdateBook(bookViewModel);
+                var result = await _bookService.UpdateBook(bookViewModel, await GetAccessToken());
                 if (result is not null) return RedirectToAction(nameof(Index));
             }
             else
@@ -79,7 +83,7 @@ public class BookController : Controller
     [HttpGet]
     public async Task<ActionResult<BookViewModel>> DeleteBook(int id)
     {
-        var result = await _bookService.FindBookById(id);
+        var result = await _bookService.FindBookById(id, await GetAccessToken());
         if (result is null) return View("Error");
         return View(result);
     }
@@ -87,10 +91,14 @@ public class BookController : Controller
     [HttpPost, ActionName("DeleteBook")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        var result = await _bookService.DeleteBookById(id);
+        var result = await _bookService.DeleteBookById(id, await GetAccessToken());
         if (!result) return View("Error");
         return RedirectToAction("Index");
         // return RedirectToAction(nameof(Index);
     }
 
+    private async Task<string> GetAccessToken()
+    {
+        return await HttpContext.GetTokenAsync("access_token");
+    }
 }

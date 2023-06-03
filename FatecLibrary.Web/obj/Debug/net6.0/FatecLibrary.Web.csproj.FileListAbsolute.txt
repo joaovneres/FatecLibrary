@@ -48,3 +48,12 @@ C:\src\FatecLibrary\FatecLibrary.Web\obj\Debug\net6.0\refint\FatecLibrary.Web.dl
 C:\src\FatecLibrary\FatecLibrary.Web\obj\Debug\net6.0\FatecLibrary.Web.pdb
 C:\src\FatecLibrary\FatecLibrary.Web\obj\Debug\net6.0\FatecLibrary.Web.genruntimeconfig.cache
 C:\src\FatecLibrary\FatecLibrary.Web\obj\Debug\net6.0\ref\FatecLibrary.Web.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\src\FatecLibrary\FatecLibrary.Web\bin\Debug\net6.0\System.Security.Permissions.dll

@@ -44,8 +44,8 @@ public class IdentityConfiguration
                 ClientId = "fateclibrary",
                 ClientSecrets = { new Secret("vai_aprovar".Sha256()) },
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = { "https://localhost:7080/signin-oidc" }, // login
-                PostLogoutRedirectUris = { "https://localhost:7080/signout-callback-oidc" }, // logout
+                RedirectUris = { "https://localhost:7115/signin-oidc" }, // login
+                PostLogoutRedirectUris = { "https://localhost:7115/signout-callback-oidc" }, // logout
                 AllowedScopes = new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,

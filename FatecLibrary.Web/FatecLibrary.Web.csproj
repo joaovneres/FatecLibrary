@@ -7,6 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\Shared\_LoginPartial.cshtml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\FatecLibrary.BookAPI\FatecLibrary.BookAPI.csproj" />
 	</ItemGroup>
 

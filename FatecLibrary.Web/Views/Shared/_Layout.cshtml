@@ -23,15 +23,19 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Publishing" asp-action="Index">Publishers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="CreateBook">Create Book</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Index">View Books</a>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Publishing" asp-action="Index">Publishers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Index">View Books</a>
+                            </li>
+                        }
+                    </ul>
+                    <!-- botão login-->
+                    <ul class="navbar-nav">
+                        <partial name="_LoginPartial"/>
                     </ul>
                 </div>
             </div>
