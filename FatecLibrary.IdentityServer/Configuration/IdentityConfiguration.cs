@@ -1,5 +1,5 @@
-﻿using Duende.IdentityServer;
-using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer.Models;
+using Duende.IdentityServer;
 
 namespace FatecLibrary.IdentityServer.Configuration;
 
@@ -17,7 +17,6 @@ public class IdentityConfiguration
         };
 
     public static IEnumerable<ApiScope>
-
         ApiScopes => new List<ApiScope>
         {
             // fateclibrary que irá acessar
@@ -30,22 +29,23 @@ public class IdentityConfiguration
 
     public static IEnumerable<Client>
         Clients => new List<Client>
-        {
+        { 
             // cliente genérico
             new Client
             {
                 ClientId = "client",
-                // esse segredo também será adicionado ao appsettings.json do projeto
-                ClientSecrets = { new Secret("vai_aprovar".Sha256()) },
-                AllowedGrantTypes = GrantTypes.ClientCredentials, // precisa das credenciais
-                AllowedScopes = { "read", "write", "profiles" }
+                // esse segredo também será adicionado ao appsettings.json do projeto web
+                ClientSecrets = { new Secret("vai_aprovar".Sha256())},
+                AllowedGrantTypes = GrantTypes.ClientCredentials, // precisa das credenciais do usuario
+                AllowedScopes = {"read", "write", "profiles"}
             },
-            new Client {
+            new Client
+            {
                 ClientId = "fateclibrary",
-                ClientSecrets = { new Secret("vai_aprovar".Sha256()) },
+                ClientSecrets = { new Secret("vai_aprovar".Sha256())},
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = { "https://localhost:7115/signin-oidc" }, // login
-                PostLogoutRedirectUris = { "https://localhost:7115/signout-callback-oidc" }, // logout
+                RedirectUris = {"https://localhost:7115/signin-oidc"},//login
+                PostLogoutRedirectUris = {"https://localhost:7115/signout-callback-oidc"},//logout
                 AllowedScopes = new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,

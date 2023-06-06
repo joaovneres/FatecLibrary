@@ -1,4 +1,4 @@
-using FatecLibrary.Web.Services.Entities;
+ï»¿using FatecLibrary.Web.Services.Entities;
 using FatecLibrary.Web.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -11,13 +11,13 @@ builder.Services.AddControllersWithViews();
 builder.Services
     .AddAuthentication(options =>
 {
-    options.DefaultScheme = "Coockies";
-    options.DefaultChallengeScheme = "oidc"; // tipo de autenticação que será utilizado
+    options.DefaultScheme = "Cookies";
+    options.DefaultChallengeScheme = "oidc"; // tipo de autenticaÃ§Ã£o que serÃ¡ utilizado
 })
     .AddCookie("Cookies", c =>
     {
         c.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-        // caso o acesso seja negado, ele redireciona para a página de acesso negado
+        // caso o acesso seja negado, ele redireciona para a pÃ¡gina de acesso negado
         c.Events = new CookieAuthenticationEvents()
         {
             OnRedirectToAccessDenied = (context) =>
@@ -29,7 +29,7 @@ builder.Services
     })
     .AddOpenIdConnect("oidc", options =>
     {
-        // quando o usuário clicar no cancel do login
+        // quando o usuÃ¡rio clicar no cancel do login
         options.Events.OnRemoteFailure = context =>
         {
             context.Response.Redirect("/");
@@ -41,15 +41,15 @@ builder.Services
         options.Authority = builder.Configuration["ServiceUri:IdentityServer"]; // appsettings.json
         options.GetClaimsFromUserInfoEndpoint = true;
         options.ClientId = "fateclibrary";
-        // O secret aqui está pegando do arquivo appsettings.json
-        // mas inicialmente foi criado lá na classe do IdentityConfiguration
+        // O secret aqui estÃ¡ pegando do arquivo appsettings.json
+        // mas inicialmente foi criado lÃ¡ na classe do IdentityConfiguration
         options.ClientSecret = builder.Configuration["Client:Secret"];
         options.ResponseType = "code";
         options.ClaimActions.MapJsonKey("role", "role", "role");
         options.ClaimActions.MapJsonKey("sub", "sub", "sub");
         options.TokenValidationParameters.NameClaimType = "name";
         options.TokenValidationParameters.RoleClaimType = "role";
-        options.Scope.Add("fateclibrary"); // escopo foi definido lá no Identity Configuration
+        options.Scope.Add("fateclibrary"); // escopo foi definido lÃ¡ no Identity Configuration
         options.SaveTokens = true;
     });
 
@@ -59,7 +59,7 @@ builder.Services.AddHttpClient("BookAPI", c =>
 });
 
 
-// Injeção de depêndencia
+// InjeÃ§Ã£o de depÃªndencia
 builder.Services.AddScoped<IPublishingService, PublishingService>();
 builder.Services.AddScoped<IBookService, BookService>();
 
@@ -73,13 +73,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -1,4 +1,4 @@
-﻿  using FatecLibrary.IdentityServer.Configuration;
+﻿using FatecLibrary.IdentityServer.Configuration;
 using FatecLibrary.IdentityServer.Data.Entities;
 using FatecLibrary.IdentityServer.SeedDataBase.Interfaces;
 using IdentityModel;

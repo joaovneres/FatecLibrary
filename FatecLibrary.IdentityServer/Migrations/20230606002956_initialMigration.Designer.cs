@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FatecLibrary.IdentityServer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230522222619_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230606002956_initialMigration")]
+    partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -1,8 +1,10 @@
+using Duende.IdentityServer.Services;
 using FatecLibrary.IdentityServer.Configuration;
 using FatecLibrary.IdentityServer.Data.Context;
 using FatecLibrary.IdentityServer.Data.Entities;
 using FatecLibrary.IdentityServer.SeedDataBase.Entities;
 using FatecLibrary.IdentityServer.SeedDataBase.Interfaces;
+using FatecLibrary.IdentityServer.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -48,6 +50,9 @@ builderIdentityServer.AddDeveloperSigningCredential();
 // SeedDataBaseIdentityServer
 builder.Services.AddScoped<IDatabaseInitializer, DatabaseIdentityServerInitializer>();
 
+// Profile Service
+builder.Services.AddScoped<IProfileService, ProfileAppService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -82,7 +87,7 @@ void SeedDatabaseIdentityServer(IApplicationBuilder app)
         var initRoleUsers = serviceScope.ServiceProvider
             .GetService<IDatabaseInitializer>();
 
-        initRoleUsers.InitializeSeedUsers();
         initRoleUsers.InitializeSeedRoles();
+        initRoleUsers.InitializeSeedUsers();
     }
 }
