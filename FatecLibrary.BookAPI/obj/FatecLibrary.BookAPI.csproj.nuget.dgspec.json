@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj": {}
+    "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj": {}
   },
   "projects": {
-    "C:\\src\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj": {
+    "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj",
+        "projectUniqueName": "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj",
         "projectName": "FatecLibrary.BookAPI",
-        "projectPath": "C:\\src\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\FatecLibrary\\FatecLibrary.BookAPI\\obj\\",
+        "projectPath": "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.BookAPI\\FatecLibrary.BookAPI.csproj",
+        "packagesPath": "C:\\Users\\joaovneres\\.nuget\\packages\\",
+        "outputPath": "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.BookAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joaovneres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

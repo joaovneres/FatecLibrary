@@ -9,69 +9,69 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FatecLibrary.Web
 build_property.RootNamespace = FatecLibrary.Web
-build_property.ProjectDir = C:\src\FatecLibrary\FatecLibrary.Web\
+build_property.ProjectDir = D:\Estudos\Fatec\5_SI\TESI_II\FatecLibrary\FatecLibrary.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\src\FatecLibrary\FatecLibrary.Web
+build_property.MSBuildProjectDirectory = D:\Estudos\Fatec\5_SI\TESI_II\FatecLibrary\FatecLibrary.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Book/CreateBook.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Book/CreateBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xDcmVhdGVCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Book/DeleteBook.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Book/DeleteBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xEZWxldGVCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Book/Index.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Book/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Book/UpdateBook.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Book/UpdateBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xVcGRhdGVCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Home/Index.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Publishing/CreatePublishing.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Publishing/CreatePublishing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGluZ1xDcmVhdGVQdWJsaXNoaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Publishing/DeletePublishing.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Publishing/DeletePublishing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGluZ1xEZWxldGVQdWJsaXNoaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Publishing/Index.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Publishing/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Publishing/UpdatePublishing.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Publishing/UpdatePublishing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGluZ1xVcGRhdGVQdWJsaXNoaW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Shared/Error.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Shared/_LoginPartial.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/_ViewImports.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/_ViewStart.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/src/FatecLibrary/FatecLibrary.Web/Views/Shared/_Layout.cshtml]
+[D:/Estudos/Fatec/5_SI/TESI_II/FatecLibrary/FatecLibrary.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-oryuxw9nl7

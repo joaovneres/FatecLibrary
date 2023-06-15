@@ -1808,19 +1808,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {}
+    "C:\\Users\\joaovneres\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\FatecLibrary\\FatecLibrary.IdentityServer\\FatecLibrary.IdentityServer.csproj",
+      "projectUniqueName": "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.IdentityServer\\FatecLibrary.IdentityServer.csproj",
       "projectName": "FatecLibrary.IdentityServer",
-      "projectPath": "C:\\src\\FatecLibrary\\FatecLibrary.IdentityServer\\FatecLibrary.IdentityServer.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\src\\FatecLibrary\\FatecLibrary.IdentityServer\\obj\\",
+      "projectPath": "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.IdentityServer\\FatecLibrary.IdentityServer.csproj",
+      "packagesPath": "C:\\Users\\joaovneres\\.nuget\\packages\\",
+      "outputPath": "D:\\Estudos\\Fatec\\5_SI\\TESI_II\\FatecLibrary\\FatecLibrary.IdentityServer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joaovneres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1894,7 +1899,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
